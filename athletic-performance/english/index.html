@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IQ Dogsport - Performance Gear</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Archivo:wght@400;700&amp;family=Anton&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e2e2e2",
+                        "iq-olive": "#6A804D",
+                        "secondary": "#5e5e5e",
+                        "surface-tint": "#b52619",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#e2e2e2",
+                        "tertiary": "#00178d",
+                        "outline": "#8e706b",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-container": "#8b0000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#ff907f",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#5a403c",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#ffb4a8",
+                        "on-tertiary-fixed-variant": "#0d2ccc",
+                        "iq-red-standard": "#B10000",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-primary-fixed": "#410000",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#2f3131",
+                        "footer-grey": "#6B6B6B",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#9ea9ff",
+                        "on-tertiary-fixed": "#000d60",
+                        "tertiary-fixed-dim": "#bcc3ff",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#920703",
+                        "tertiary-container": "#0025c8",
+                        "body-grey": "#1A1A1A",
+                        "outline-variant": "#e3beb8",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#ffdad4",
+                        "divider": "#E6E6E6",
+                        "primary": "#610000",
+                        "on-secondary-container": "#646464",
+                        "tertiary-fixed": "#dfe0ff",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed": "#1b1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "600px",
+                        "stack-sm": "16px",
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "stack-md": "32px"
+                    },
+                    "fontFamily": {
+                        "hero-impact": ["Anton"],
+                        "hero-h1-mobile": ["Montserrat"],
+                        "hero-h1": ["Montserrat"],
+                        "section-h2": ["Montserrat"],
+                        "body-lg": ["Archivo"],
+                        "button-text": ["Montserrat"],
+                        "sub-h3": ["Montserrat"],
+                        "section-h2-mobile": ["Montserrat"],
+                        "body-sm": ["Archivo"]
+                    },
+                    "fontSize": {
+                        "hero-impact": ["64px", {"lineHeight": "1", "fontWeight": "400"}],
+                        "hero-h1-mobile": ["32px", {"lineHeight": "1.1", "letterSpacing": "-1px", "fontWeight": "800"}],
+                        "hero-h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-1px", "fontWeight": "800"}],
+                        "section-h2": ["28px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "button-text": ["16px", {"lineHeight": "1", "letterSpacing": "1px", "fontWeight": "700"}],
+                        "sub-h3": ["20px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "section-h2-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-sm": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { -webkit-font-smoothing: antialiased; }
+        .transition-all { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface border-b border-divider fixed w-full top-0 z-50">
+<div class="max-w-[600px] mx-auto flex justify-between items-center px-gutter py-2">
+<div class="flex items-center">
+<img alt="IQ Dogsport Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXLKr9f1sC-lQg1YBf0xvNh9vmyJHPxdyaI6uLxMuazExz7mAfu9v187HcU6Mq-Bo5gG7Wy1sW7R1cujO4x_hmTK9cU_Gh4V014pozfqBF3AEAvC05kA5tYy0l6brZ61SpHAkYwE6sgGC-5X_UqKyKvEso0W2PBBbGaRkNMtN0x3EeiypLNQqLFb9MhF9wegW9Twiwu9uuLXnRYFIcb1jOevj7ZdJOV_7iNpDqabXtY9A8wG-d9hRsvh6Bikikfb9RBdREYx6OlVL_"/>
+</div>
+<div class="flex gap-4 items-center">
+<a class="font-button-text text-button-text uppercase tracking-widest text-iq-red-standard font-bold text-[10px] hover:text-primary transition-colors" href="#">View in Browser</a>
+<div class="flex gap-2">
+<span class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-iq-red-standard transition-all">share</span>
+<span class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-iq-red-standard transition-all">public</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[600px] mx-auto pt-[68px] bg-white shadow-sm min-h-screen">
+<!-- Hero Section -->
+<section class="px-gutter pt-stack-lg pb-stack-md text-center">
+<h2 class="font-hero-h1 text-hero-h1 uppercase mb-4 italic font-extrabold">FULLY FUNCTIONAL.<br/>LESS FABRIC.</h2>
+<p class="text-secondary font-body-lg max-w-[420px] mx-auto mb-stack-sm leading-relaxed">
+                Designed for warm training days — with quick reward, full freedom of movement and less weight on the body.
+            </p>
+<div class="pt-4">
+<button class="bg-[#8B0000] text-on-primary font-button-text text-button-text uppercase px-8 py-4 transition-all hover:bg-primary active:opacity-80">
+                    SECURE YOUR 10% DISCOUNT
+                </button>
+</div>
+</section>
+<!-- Main Product Image -->
+<div class="w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Professional dog trainer in a technical summer vest" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATLj2tFmETN8PGMYRbOyYkLYkbUihmaeoddIcm8KbXAjkTCq8oO2WX1_YX-GsYNC1eJxe81eWBr9Qo4uqRFnH7bTdUb7tfYLAN0leFzpdAp1JfdcmzduGizKQoYs8Ih7aTt6tOfmnbSPv1QqVaieZ3EuieBFXZmnbN-gLJXI68xXspMDOROlFawvp4bb4aHg3ZRxF8NKKn0PjRFEcaEA1pNWpTEjtRp_PFoWu8rBmY2nag0x1jw-fmaRnb5bvKOAsHLuNqzPUs3M9-"/>
+</div>
+<!-- Section 1: The Vest -->
+<section class="px-gutter py-stack-lg space-y-stack-md">
+<div class="space-y-4">
+<h3 class="font-section-h2 text-section-h2 uppercase italic font-extrabold leading-tight">30°C DURING TRAINING. AND YOUR VEST IS SWEATING TOO.</h3>
+<p class="text-on-surface-variant font-body-lg">In summer, every gram counts. The IQ Summer Vest 3.0 retains the full functionality of your dog sports vest with significantly less fabric and heat.</p>
+<ul class="space-y-3 pt-2">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard mt-0.5">check_circle</span>
+<span class="font-body-lg">Patented chest pocket with pull system</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard mt-0.5">check_circle</span>
+<span class="font-body-lg">Mesh zones on back and shoulders</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard mt-0.5">check_circle</span>
+<span class="font-body-lg">Large back pocket for teething pillows</span>
+</li>
+</ul>
+</div>
+<!-- Detail Image for product section -->
+<div class="w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img alt="Close up detail of IQ Dogsport gear" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjkeJKhY4JWhTd--PPYP3hKxfxIdsCG5O8etmILMeou1A58bKLrgZeFQIqxqUaD6DrjD_yLk89JyxmdUiZ7zVDJddlPi91EA2n149oMcrBk45breOBytFjCEXBRwj_8VHnHANfLtmPLd1W0q6MpukBGumxyAksuWHuwzoPmFYIQDI2aY5zmoBwaq5OIjF-RI5avknhYx6G-1qDyVAOmgk1em3xd-jWzf1msFSliT4aDsnh41hClu-GnWVArIcEYs3rCTsHPSsOVPrL"/>
+</div>
+<!-- Testimonials 1 -->
+<div class="bg-surface-container p-gutter space-y-6">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[#FFD700]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[#FFD700]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[#FFD700]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[#FFD700]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[#FFD700]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-body-sm font-bold ml-2">5.0 / 5.0 Performance Rating</span>
+</div>
+<div class="space-y-4">
+<p class="italic text-body-sm border-l-2 border-iq-red-standard pl-4">"The mesh material on the shoulders and back keeps you airy even on hot days." — <span class="font-bold">Verified Customer</span></p>
+<p class="italic text-body-sm border-l-2 border-iq-red-standard pl-4">"Best summer vest I've ever owned. Lightweight but still carries everything." — <span class="font-bold">Verified Customer</span></p>
+<p class="italic text-body-sm border-l-2 border-iq-red-standard pl-4">"The pull system works perfectly even in the lighter fabric." — <span class="font-bold">Verified Customer</span></p>
+</div>
+</div>
+<div class="flex justify-center pt-4">
+<button class="bg-[#8B0000] text-on-primary font-button-text text-button-text uppercase px-8 py-4 transition-all hover:bg-primary active:opacity-80">
+                    TO THE SUMMER VEST. SECURE 10%
+                </button>
+</div>
+</section>
+<!-- Divider -->
+<hr class="border-divider"/>
+<!-- Section 2: The Belt -->
+<section class="py-stack-lg bg-surface-container-lowest">
+<div class="px-gutter mb-stack-md">
+<h3 class="font-section-h2 text-section-h2 uppercase mb-4 italic font-extrabold">WHEN A VEST BECOMES TOO MUCH.</h3>
+<p class="text-on-surface-variant font-body-lg mb-6">Some training sessions don't require a vest — just a reward, a toy, and a quick hand. The IQ Multifunctional Belt sits close to the body under clothing — almost invisible.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard mt-0.5">check_circle</span>
+<span class="font-body-lg">Integrated food &amp; toy pouches</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard mt-0.5">check_circle</span>
+<span class="font-body-lg">Highly breathable technical mesh</span>
+</li>
+</ul>
+</div>
+<div class="w-full aspect-[16/9] bg-surface-container-highest relative group overflow-hidden">
+<img alt="Tactical dog training belt details" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9A_4VT-Kp8aBP-qQsIhSKvOeofR9OTnbB60ADYZ_9qwVQV5askKFG6HkkPzMJQLKgWk0fVDZPLxySYzsbpHCuEwacOBdWImGlGGXUjdWnqZHZB6uVLCn1OBQftakIm0nLzp0mnAsxDrn3No8z2LnUigZNUBc82vBDx2WsL564EPdS-h23p0LIn2Q1j3qbcr1i3MRSYsBMRtdGjWSSRPc8PT9bKoGXMnrDnuoM4hU9qqsdGUWjIqWoOKKuNkz7zWCJB-lnIWPV56ij"/>
+<div class="absolute top-4 right-4 bg-iq-red-standard text-white px-3 py-1 font-button-text text-[12px] uppercase">
+                    New Tech
+                </div>
+</div>
+<div class="px-gutter mt-stack-md space-y-gutter">
+<!-- Testimonials 2 -->
+<div class="bg-surface-container-low p-gutter space-y-4">
+<p class="italic text-body-sm border-l-2 border-iq-red-standard pl-4">"Perfect for quick sessions in the park without carrying a full kit." — <span class="font-bold">Verified Customer</span></p>
+<p class="italic text-body-sm border-l-2 border-iq-red-standard pl-4">"Incredibly light, I forget I'm even wearing it." — <span class="font-bold">Verified Customer</span></p>
+<p class="italic text-body-sm border-l-2 border-iq-red-standard pl-4">"Great quality materials that handle the heat well." — <span class="font-bold">Verified Customer</span></p>
+</div>
+<div class="flex justify-center">
+<button class="bg-[#8B0000] text-on-primary font-button-text text-button-text uppercase px-8 py-4 transition-all hover:bg-primary active:opacity-80">
+                        TO THE MULTIFUNCTIONAL BELT
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bundle Section -->
+<section class="bg-surface-container-high py-stack-lg px-gutter text-center space-y-stack-sm">
+<h3 class="font-section-h2 text-section-h2 uppercase italic font-extrabold">15% OFF THE BUNDLE.<br/>ONLY UNTIL SUNDAY.</h3>
+<p class="text-on-surface font-body-lg max-w-[450px] mx-auto">Complete your summer loadout with the IQ Summer Set-up. High performance, zero bulk.</p>
+<div class="bg-white p-6 inline-block text-left border border-divider mt-4">
+<ul class="space-y-2">
+<li class="flex items-center gap-2 font-bold text-iq-red-standard">
+<span class="material-symbols-outlined">add</span> Summer Vest 3.0
+                    </li>
+<li class="flex items-center gap-2 font-bold text-iq-red-standard">
+<span class="material-symbols-outlined">add</span> Multifunctional Belt
+                    </li>
+<li class="pt-2 border-t border-divider mt-2 text-[12px] uppercase tracking-widest text-on-surface-variant font-black">
+                        Exclusive Bundle Price
+                    </li>
+</ul>
+</div>
+<div class="pt-6">
+<button class="bg-[#8B0000] text-on-primary font-button-text text-button-text uppercase px-10 py-5 transition-all hover:bg-primary active:opacity-90">
+                    SECURE YOUR SUMMER SET-UP NOW
+                </button>
+</div>
+</section>
+<!-- Closing Section -->
+<section class="bg-body-grey text-white py-stack-lg px-gutter text-center space-y-stack-sm">
+<h2 class="font-hero-impact text-hero-impact uppercase tracking-tighter">SECURE YOUR SETUP</h2>
+<p class="font-body-lg text-secondary-fixed max-w-[400px] mx-auto">Summer is short. Don't let the heat slow down your training. Promotion ends Sunday, May 24, 2026, at 11:59 PM.</p>
+<div class="pt-6">
+<button class="bg-[#8B0000] text-on-primary font-button-text text-button-text uppercase px-12 py-5 transition-all hover:bg-white hover:text-[#8B0000] border-2 border-transparent hover:border-[#8B0000] active:opacity-90 w-full md:w-auto">
+                    ORDER NOW!
+                </button>
+</div>
+</section>
+<!-- Social Icons -->
+<div class="flex justify-center gap-8 py-stack-md border-t border-divider">
+<a class="text-on-surface hover:text-iq-red-standard transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px]">social_leaderboard</span>
+</a>
+<a class="text-on-surface hover:text-iq-red-standard transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px]">photo_camera</span>
+</a>
+<a class="text-on-surface hover:text-iq-red-standard transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px]">movie</span>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-body-grey dark:bg-body-grey w-full mt-stack-lg">
+<div class="max-w-[600px] mx-auto flex flex-col gap-stack-sm px-gutter py-stack-lg">
+<div class="font-button-text text-button-text text-on-primary uppercase tracking-[2px]">IQ Dogsport</div>
+<p class="font-body-sm text-body-sm text-footer-grey">© IQ Dogsport GmbH. All rights reserved.</p>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 mt-4">
+<a class="text-footer-grey font-body-sm hover:text-iq-red-standard transition-colors focus:ring-2 focus:ring-iq-red-standard outline-none" href="#">Privacy Policy</a>
+<a class="text-footer-grey font-body-sm hover:text-iq-red-standard transition-colors focus:ring-2 focus:ring-iq-red-standard outline-none" href="#">Imprint</a>
+<a class="text-footer-grey font-body-sm hover:text-iq-red-standard transition-colors focus:ring-2 focus:ring-iq-red-standard outline-none" href="#">T&amp;Cs</a>
+<a class="text-footer-grey font-body-sm hover:text-iq-red-standard transition-colors focus:ring-2 focus:ring-iq-red-standard outline-none" href="#">Right of Withdrawal</a>
+<a class="text-footer-grey font-body-sm hover:text-iq-red-standard transition-colors focus:ring-2 focus:ring-iq-red-standard outline-none" href="#">Unsubscribe</a>
+</nav>
+<div class="mt-stack-sm space-y-1">
+<p class="text-footer-grey text-[12px]">IQ Dogsport GmbH</p>
+<p class="text-footer-grey text-[12px]">Langenwiesen 2, 85276 Pfaffenhofen, Germany</p>
+<p class="text-footer-grey text-[12px]">mail@iq-dogsport.de</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

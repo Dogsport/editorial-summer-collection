@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IQ Dogsport — Newsletter Concepts</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #1A1A1A;
+      font-family: 'Archivo', Arial, sans-serif;
+      line-height: 1.4;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 28px 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      width: 70px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      background: #fff;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #8B0000;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .card h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 22px;
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #111;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 18px;
+      font-size: 13.5px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 12px 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .btn-primary {
+      background: #8B0000;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      border: 1px solid #d9d9d9;
+      color: #111;
+      background: #fff;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        min-height: auto;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-image {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <img class="logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXLKr9f1sC-lQg1YBf0xvNh9vmyJHPxdyaI6uLxMuazExz7mAfu9v187HcU6Mq-Bo5gG7Wy1sW7R1cujO4x_hmTK9cU_Gh4V014pozfqBF3AEAvC05kA5tYy0l6brZ61SpHAkYwE6sgGC-5X_UqKyKvEso0W2PBBbGaRkNMtN0x3EeiypLNQqLFb9MhF9wegW9Twiwu9uuLXnRYFIcb1jOevj7ZdJOV_7iNpDqabXtY9A8wG-d9hRsvh6Bikikfb9RBdREYx6OlVL_" alt="IQ Dogsport Logo">
+
+      <h1>IQ Dogsport<br>Newsletter Concepts</h1>
+
+      <p>
+        Three reusable Brevo master-template directions for internal review.
+      </p>
+    </section>
+
+    <section class="grid">
+
+      <div class="card">
+        <img class="card-image" src="assets/screenshots/athletic-preview.png" alt="Athletic Performance">
+        <div class="card-content">
+          <span class="tag">Athletic Performance</span>
+          <h2>Sport Performance</h2>
+          <p>Clean, fast, mobile-first ecommerce direction with strong product focus.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="athletic-performance/german/index.html">German Version</a>
+            <a class="btn btn-secondary" href="athletic-performance/english/index.html">English Version</a>
+             <a class="btn btn-secondary" 
+     href="https://app.brevo.com/editor/newsletters/56" 
+     target="_blank">
+    Open Brevo Template
+  </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image" src="assets/screenshots/tactical-preview.png" alt="Tactical Luxury">
+        <div class="card-content">
+          <span class="tag">Tactical Luxury</span>
+          <h2>Premium Tactical</h2>
+          <p>Stronger tactical direction with premium contrast and conversion-focused CTAs.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="tactical-luxury/german/index.html">German Version</a>
+            <a class="btn btn-secondary" href="tactical-luxury/english/index.html">English Version</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-image" src="assets/screenshots/editorial-preview.png" alt="Editorial Outdoor">
+        <div class="card-content">
+          <span class="tag">Editorial Outdoor</span>
+          <h2>Outdoor Editorial</h2>
+          <p>Image-led storytelling direction with luxury spacing and outdoor brand feeling.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="editorial-outdoor/german/index.html">German Version</a>
+            <a class="btn btn-secondary" href="editorial-outdoor/english/index.html">English Version</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      IQ Dogsport GmbH — Newsletter Design System Presentation
+    </footer>
+
+  </div>
+</body>
+</html>
