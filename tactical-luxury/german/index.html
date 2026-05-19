@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Archivo:wght@400;500;600&amp;family=Anton&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .text-shadow-tactical {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#e2e2e2",
+                      "iq-olive": "#6A804D",
+                      "secondary": "#5e5e5e",
+                      "surface-tint": "#b52619",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#e2e2e2",
+                      "tertiary": "#00178d",
+                      "outline": "#8e706b",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f3f3f3",
+                      "primary-container": "#8b0000",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#ff907f",
+                      "on-secondary-fixed-variant": "#474747",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#5a403c",
+                      "surface-bright": "#f9f9f9",
+                      "surface": "#f9f9f9",
+                      "inverse-primary": "#ffb4a8",
+                      "on-tertiary-fixed-variant": "#0d2ccc",
+                      "iq-red-standard": "#B10000",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "on-primary-fixed": "#410000",
+                      "surface-container": "#eeeeee",
+                      "inverse-surface": "#2f3131",
+                      "footer-grey": "#6B6B6B",
+                      "on-surface": "#1a1c1c",
+                      "on-tertiary-container": "#9ea9ff",
+                      "on-tertiary-fixed": "#000d60",
+                      "tertiary-fixed-dim": "#bcc3ff",
+                      "error": "#ba1a1a",
+                      "background": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-primary-fixed-variant": "#920703",
+                      "tertiary-container": "#0025c8",
+                      "body-grey": "#1A1A1A",
+                      "outline-variant": "#e3beb8",
+                      "surface-variant": "#e2e2e2",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffdad4",
+                      "divider": "#E6E6E6",
+                      "primary": "#610000",
+                      "on-secondary-container": "#646464",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-background": "#1a1c1c",
+                      "inverse-on-surface": "#f1f1f1",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed": "#1b1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "600px",
+                      "stack-sm": "16px",
+                      "stack-lg": "64px",
+                      "gutter": "24px",
+                      "stack-md": "32px"
+              },
+              "fontFamily": {
+                      "hero-impact": ["Anton"],
+                      "hero-h1-mobile": ["Montserrat"],
+                      "hero-h1": ["Montserrat"],
+                      "section-h2": ["Montserrat"],
+                      "body-lg": ["Archivo"],
+                      "button-text": ["Montserrat"],
+                      "sub-h3": ["Montserrat"],
+                      "section-h2-mobile": ["Montserrat"],
+                      "body-sm": ["Archivo"]
+              },
+              "fontSize": {
+                      "hero-impact": ["64px", {"lineHeight": "1", "fontWeight": "400"}],
+                      "hero-h1-mobile": ["32px", {"lineHeight": "1.1", "letterSpacing": "-1px", "fontWeight": "800"}],
+                      "hero-h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-1px", "fontWeight": "800"}],
+                      "section-h2": ["28px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                      "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "button-text": ["16px", {"lineHeight": "1", "letterSpacing": "1px", "fontWeight": "700"}],
+                      "sub-h3": ["20px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "section-h2-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                      "body-sm": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          }
+        }
+    </script>
+</head>
+<body class="bg-white text-on-surface font-body-lg text-body-lg selection:bg-iq-red-standard selection:text-white">
+<!-- Utility Top Bar -->
+<nav class="bg-surface border-b border-divider fixed w-full top-0 z-50">
+<div class="max-w-[600px] mx-auto flex justify-between items-center px-gutter py-3">
+<a class="font-button-text text-[10px] uppercase tracking-[0.2em] text-on-surface-variant hover:text-iq-red-standard transition-colors" href="#">
+                Im Browser öffnen
+            </a>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[18px] text-iq-red-standard cursor-pointer opacity-80 hover:opacity-100" data-icon="share">share</span>
+<span class="material-symbols-outlined text-[18px] text-iq-red-standard cursor-pointer opacity-80 hover:opacity-100" data-icon="public">public</span>
+</div>
+</div>
+</nav>
+<main class="max-w-[600px] mx-auto pt-[44px]">
+<!-- Header -->
+<header class="py-stack-md flex justify-center items-center bg-white">
+<div class="flex items-center justify-center">
+<img alt="IQ DOGSPORT Logo" class="h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXLKr9f1sC-lQg1YBf0xvNh9vmyJHPxdyaI6uLxMuazExz7mAfu9v187HcU6Mq-Bo5gG7Wy1sW7R1cujO4x_hmTK9cU_Gh4V014pozfqBF3AEAvC05kA5tYy0l6brZ61SpHAkYwE6sgGC-5X_UqKyKvEso0W2PBBbGaRkNMtN0x3EeiypLNQqLFb9MhF9wegW9Twiwu9uuLXnRYFIcb1jOevj7ZdJOV_7iNpDqabXtY9A8wG-d9hRsvh6Bikikfb9RBdREYx6OlVL_"/>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[600px] w-full overflow-hidden flex items-end">
+<img alt="Tactical Dog Training" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8cBgyehaLjQSYc9N2-GUWxAbkM0IxUtAjTZmps7ZcNNPbhKpVNWyMHRlC-JH6wtt5ojUNXnR_3Z-jaPxiicrPI_Cmk1ZQkhd5HYEOPO7t_6_bQ1B1jmEQViWcqYIxitkVGzZbuJMnQThBbP5JEyRL571DaVJCcnomcPn77ZyH2q0BmDWnGCjYRU1rF82NNuo5KyYaSuek3ZjdMsB1YlphIbSB11ma572w5CPXT4g1hXVMeYJE75wQn9S6BCjlthojMWvFFT6SPIiZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="relative z-10 p-gutter pb-stack-md w-full">
+<h1 class="font-hero-h1-mobile text-hero-h1-mobile text-white uppercase mb-2">VOLLE FUNKTION.<br/>WENIGER STOFF.</h1>
+<p class="text-white/80 font-body-sm text-body-sm mb-6 max-w-[80%]">Für warme Trainingstage entwickelt — mit schneller Belohnung, voller Bewegungsfreiheit und weniger Gewicht am Körper.</p>
+<button class="bg-primary-container text-white font-button-text text-button-text px-8 py-4 uppercase border-none hover:brightness-110 transition-all active:scale-95">
+                    10% AUF DIE SOMMERWESTE / 15% AUF DAS SOMMER-SETUP
+                </button>
+</div>
+</section>
+<!-- Product Story 1: Sommerweste -->
+<section class="bg-white py-stack-lg px-gutter">
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-2">
+<span class="w-12 h-[2px] bg-iq-red-standard"></span>
+<span class="font-button-text text-[12px] uppercase text-iq-red-standard tracking-widest">Performance Gear</span>
+</div>
+<h2 class="font-section-h2-mobile text-section-h2-mobile uppercase font-extrabold">30 °C IM TRAINING. UND DEINE WESTE SCHWITZT MIT.</h2>
+<p class="font-body-lg text-on-surface-variant">Im Sommer wird jedes Gramm spürbar. Trainingsjacke = Schweiß. Hosentaschen = Krümel. Spielzeug im Auto = kein Triebaufbau im richtigen Moment. Die IQ Sommerweste 3.0 hält die volle Funktion deiner Hundesport-Weste — bei deutlich weniger Stoff und Hitze.</p>
+<div class="my-stack-sm aspect-square overflow-hidden bg-surface-container">
+<img alt="IQ Sommerweste 3.0 Details" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5QPh2kxY68XDcehh1Gc_wh2D9nY2hbWpbFcw_bVUhYZFf9EhYY_czaLctduy8ZljbneNo80Wc1WKSXpW9BfR8aA1NQnxEb_Mor7CGRNiD7pzoS7y0-G2sQKu4cxDy2EKvuiNA_iKFuviYC8a7rTYiRx74rH-S5f-M2nR6heGTi2wif7xv_HiJPz2Au8QDMRdCISLuxhBScIgG0yu_aFgvPHG4CCUCeWatmLbXTCzmNFpnlksiJS2ZCqD1vNJ_yIoBO-2hWFd-Jxy0"/>
+</div>
+<ul class="space-y-4 font-body-lg text-body-lg text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="check_circle">check_circle</span>
+<span>Patentierte Brusttasche mit Zugsystem — lautlose, präzise Bestätigung</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="check_circle">check_circle</span>
+<span>Mesh-Zonen an Rücken und Schultern</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="check_circle">check_circle</span>
+<span>Große Rückentasche für Beißkissen, Spielzeug, Flexileine</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="check_circle">check_circle</span>
+<span>Teil des modularen IQ Trainingssystems</span>
+</li>
+</ul>
+<button class="mt-4 bg-primary-container text-white font-button-text text-button-text px-8 py-4 uppercase border-none self-start hover:brightness-110 transition-all">
+                    ZUR SOMMERWESTE . 10% SICHERN
+                </button>
+<!-- Testimonials 1 -->
+<div class="mt-stack-md space-y-4">
+<div class="p-6 bg-surface-container-low border-l-4 border-iq-red-standard">
+<p class="font-body-lg italic text-on-surface">"100% erste Wahl im Hundesport — die beste Qualität und Funktionalität, die wir gefunden haben."</p>
+<p class="font-body-sm text-footer-grey mt-2">— Verifizierter Kunde</p>
+</div>
+<div class="p-6 bg-surface-container-low border-l-4 border-iq-red-standard">
+<p class="font-body-lg italic text-on-surface">"Perfekt für Sommer-Sessions. Das Mesh macht einen riesigen Unterschied, ohne dass Taschenplatz verloren geht."</p>
+<p class="font-body-sm text-footer-grey mt-2">— Verifizierter Kunde</p>
+</div>
+<div class="p-6 bg-surface-container-low border-l-4 border-iq-red-standard">
+<p class="font-body-lg italic text-on-surface">"Die patentierte Brusttasche ist ein Gamechanger für das Fokustraining."</p>
+<p class="font-body-sm text-footer-grey mt-2">— Verifizierter Kunde</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Story 2: Gürtel -->
+<section class="bg-body-grey text-white py-stack-lg px-gutter">
+<div class="flex flex-col gap-stack-sm">
+<h2 class="font-section-h2-mobile text-section-h2-mobile uppercase font-extrabold text-white">WENN EINE WESTE ZU VIEL WIRD.</h2>
+<p class="font-body-lg text-white/70">Manche Trainings brauchen keine Weste — nur Belohnung, Spielzeug und schnelle Hand. Klassische Trainingsschürzen flattern, rutschen, lenken den Hund ab. Der IQ Multifunktionsgürtel sitzt körpernah unter der Kleidung — nahezu unsichtbar.</p>
+<div class="my-stack-sm aspect-video overflow-hidden border border-white/10">
+<img alt="IQ Multifunktionsgürtel Detail" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIzF2YMCyX_IX6_d1d04e9Rqs3yC74zTtlNWEV4AtPfXAcxUsW5jFHNdbSYUz4LPQjSHhJOBgpW9_0OwerIqdeTnwavm0HF-yvHq3_enBXJ-MGTSj7kDMfnYkPRbuFcK3tHlGeyYRgrXLK2zxT-hfDHCANoNxXNanpwz6ZZvF1SQYIjydHNwAggT7dMRzN6bOz35ALVpkGV1JGXsoV_b8csldbTzdPbbMD20ONIJbmLjO-xQuFdJSAFqn5RqigO4_Maruk6Z-jsxMh"/>
+</div>
+<ul class="space-y-4 font-body-lg text-white/80">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="bolt">bolt</span>
+<span>Körpernah &amp; unauffällig — auch unter T-Shirt oder Hoodie</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="bolt">bolt</span>
+<span>Futter und Spielzeug direkt griffbereit</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="bolt">bolt</span>
+<span>Große Rückentasche für Beißkissen oder Flexileine</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-iq-red-standard" data-icon="bolt">bolt</span>
+<span>Teil des modularen IQ Trainingssystems</span>
+</li>
+</ul>
+<p class="font-body-sm italic text-white/60 mt-2">Besonders gut für: Sessions, bei denen du nur das Nötigste brauchst oder für einen minimalistischen Look.</p>
+<button class="mt-4 bg-primary-container text-white font-button-text text-button-text px-8 py-4 uppercase border-none self-start hover:brightness-110 transition-all">
+                    ZUM MULTIFUNKTIONSGÜRTEL
+                </button>
+<!-- Testimonials 2 -->
+<div class="mt-stack-md space-y-4">
+<div class="p-6 bg-white/5 border-l-4 border-iq-red-standard">
+<p class="font-body-lg italic text-white/90">"Der beste Gürtel auf dem Markt. Er verrutscht nicht und passt perfekt."</p>
+<p class="font-body-sm text-white/50 mt-2">— Verifizierter Kunde</p>
+</div>
+<div class="p-6 bg-white/5 border-l-4 border-iq-red-standard">
+<p class="font-body-lg italic text-white/90">"Ich trage ihn zum Fährtenlesen und für kurze Unterordnungsübungen. Super vielseitig."</p>
+<p class="font-body-sm text-white/50 mt-2">— Verifizierter Kunde</p>
+</div>
+<div class="p-6 bg-white/5 border-l-4 border-iq-red-standard">
+<p class="font-body-lg italic text-white/90">"Endlich ein Trainingsgürtel, der professionell aussieht und nicht wie eine Bauchtasche."</p>
+<p class="font-body-sm text-white/50 mt-2">— Verifizierter Kunde</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bundle Section -->
+<section class="bg-[#F7F7F7] py-stack-lg px-gutter text-center">
+<div class="border-2 border-iq-red-standard p-stack-md">
+<h3 class="font-sub-h3 text-sub-h3 uppercase text-iq-red-standard mb-2">LIMITIERTES SOMMER-SETUP</h3>
+<h2 class="font-hero-h1-mobile text-hero-h1-mobile uppercase font-extrabold mb-4">15% AUFS BUNDLE. NUR BIS SONNTAG.</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Sommerweste + Multifunktionsgürtel = das volle modulare Sommer-Setup. Eine Futtertasche, drei Setups: Weste, Gürtel, Hose. Komplett kompatibel im IQ Trainingssystem. Bis Sonntag, 24.05.</p>
+<div class="bg-white p-6 shadow-sm mb-8 text-left">
+<p class="font-body-sm text-footer-grey mb-4 uppercase tracking-widest">Dein Angebot:</p>
+<div class="flex justify-between border-b border-divider py-2">
+<span>IQ Sommerweste 3.0</span>
+<span class="font-bold text-iq-red-standard">-10%</span>
+</div>
+<div class="flex justify-between py-2">
+<span>Weste + Multifunktionsgürtel</span>
+<span class="font-bold text-iq-red-standard">-15%</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white font-button-text text-button-text px-8 py-5 uppercase border-none hover:brightness-110 transition-all">
+                    JETZT SOMMER SET-UP SICHERN
+                </button>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="relative h-[400px] w-full flex items-center justify-center overflow-hidden">
+<img alt="Final Action" class="absolute inset-0 w-full h-full object-cover scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIzF2YMCyX_IX6_d1d04e9Rqs3yC74zTtlNWEV4AtPfXAcxUsW5jFHNdbSYUz4LPQjSHhJOBgpW9_0OwerIqdeTnwavm0HF-yvHq3_enBXJ-MGTSj7kDMfnYkPRbuFcK3tHlGeyYRgrXLK2zxT-hfDHCANoNxXNanpwz6ZZvF1SQYIjydHNwAggT7dMRzN6bOz35ALVpkGV1JGXsoV_b8csldbTzdPbbMD20ONIJbmLjO-xQuFdJSAFqn5RqigO4_Maruk6Z-jsxMh"/>
+<div class="absolute inset-0 bg-iq-red-standard/80 mix-blend-multiply"></div>
+<div class="relative z-10 text-center px-gutter">
+<h2 class="font-hero-h1-mobile text-hero-h1-mobile text-white uppercase font-extrabold mb-4 text-shadow-tactical">Der Sommer ist kurz.<br/>Die Trainingsphase noch kürzer.</h2>
+<p class="text-white font-body-lg mb-6">Aktion endet am Sonntag, 24. Mai 2026, um 23:59 Uhr.</p>
+<button class="bg-white text-iq-red-standard font-button-text text-button-text px-12 py-5 uppercase border-none hover:bg-on-surface hover:text-white transition-all shadow-xl">
+                    JETZT BESTELLEN!
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-body-grey text-white py-stack-lg px-gutter">
+<div class="flex flex-col gap-stack-md">
+<div class="flex justify-between items-center border-b border-white/10 pb-stack-sm">
+<div class="font-button-text text-button-text uppercase font-black">IQ DOGSPORT</div>
+<div class="flex gap-4">
+<a class="text-white hover:text-iq-red-standard transition-colors" href="#"><span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span></a>
+<a class="text-white hover:text-iq-red-standard transition-colors" href="#"><span class="material-symbols-outlined" data-icon="camera">camera</span></a>
+<a class="text-white hover:text-iq-red-standard transition-colors" href="#"><span class="material-symbols-outlined" data-icon="smart_display">smart_display</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-sm">
+<div class="space-y-2">
+<p class="font-body-sm text-white/50 uppercase tracking-widest text-[10px]">Kontakt</p>
+<p class="font-body-sm">IQ Dogsport GmbH</p>
+<p class="font-body-sm">Langenwiesen 2,</p>
+<p class="font-body-sm">85276 Pfaffenhofen</p>
+<p class="font-body-sm text-iq-red-standard">mail@iq-dogsport.de</p>
+</div>
+<div class="flex flex-col gap-2 items-end">
+<p class="font-body-sm text-white/50 uppercase tracking-widest text-[10px]">Rechtliches</p>
+<a class="font-body-sm text-footer-grey hover:text-white transition-colors" href="#">Datenschutz</a>
+<a class="font-body-sm text-footer-grey hover:text-white transition-colors" href="#">Impressum</a>
+<a class="font-body-sm text-footer-grey hover:text-white transition-colors" href="#">AGB</a>
+<a class="font-body-sm text-footer-grey hover:text-white transition-colors" href="#">Widerruf</a>
+<a class="font-body-sm text-footer-grey hover:text-white transition-colors" href="#">Abbestellen</a>
+</div>
+</div>
+<div class="mt-stack-sm pt-stack-sm border-t border-white/10 text-center">
+<p class="font-body-sm text-footer-grey">© IQ Dogsport GmbH. Alle Rechte vorbehalten.</p>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('img').forEach(img => {
+                const speed = 0.05;
+                if(img.parentElement.classList.contains('overflow-hidden')) {
+                    img.style.transform = `translateY(${scrolled * speed}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>
